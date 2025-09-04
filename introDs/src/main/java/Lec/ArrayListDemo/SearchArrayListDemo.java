@@ -1,9 +1,11 @@
-package ArrayListDemo;
+package Lec.ArrayListDemo;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class SearchArrayListDemo {
+
+
 
     public static void printSearchResult(int index, int value){
         if( index >=0)
@@ -39,6 +41,7 @@ public class SearchArrayListDemo {
         arrayList.remove(0);
         SearchArrayListDemo.print(arrayList);
 
+        MyArrayList list = new MyArrayList(10);
 
 
     }

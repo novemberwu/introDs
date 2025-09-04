@@ -1,4 +1,4 @@
-package LinkedListDemo;
+package Lec.LinkedListDemo;
 
 public class SList {
 

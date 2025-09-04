@@ -1,4 +1,4 @@
-package ArrayListDemo;
+package Lec.ArrayListDemo;
 
 import java.util.ArrayList;
 
