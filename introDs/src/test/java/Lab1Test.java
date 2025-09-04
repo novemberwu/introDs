@@ -1,12 +1,11 @@
-import Lab1.Joey;
-import Lab1.Michael;
-import Lab1.Qingwen;
+import Lab1.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -15,23 +14,47 @@ public class Lab1Test {
     private final PrintStream standardOut = System.out;
     private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
 
+    private ArrayList<Homework> homeworks = new ArrayList<>();
+
     @BeforeEach
     public void setUp() {
         System.setOut(new PrintStream(outputStreamCaptor));
+
+        //homeworks.add( new Michael());
+        //homeworks.add( new Qingwen());
+        //homeworks.add(new Joey());
+        homeworks.add(new Rachel());
     }
 
 
     @Test
     void testHomework() {
-        // Assume 'MyClass' has a method 'printMessage' that prints to System.out
-        Michael lab = new Michael();
-        //Joey lab  = new Joey();
-        //Qingwen lab = new Qingwen();
-        String[] args = new String[]{"Rachel", "Joe", "Ross"};
-        lab.homework(args);
 
-        assertEquals("Hi Ross, Joe and Rachel", outputStreamCaptor.toString().trim());
+        String[] args = new String[]{"Rachel", "Joe", "Ross"};
+
+        for(Homework homework: this.homeworks){
+            homework.homework(args);
+            assertEquals("Hi Ross, Joe and Rachel", outputStreamCaptor.toString().trim());
+
+        }
+
     }
+
+
+    @Test
+    void testHomeworkInvalidInput(){
+        String[] args = new String[]{"Rachel"};
+
+        for(Homework homework: this.homeworks){
+            homework.homework(args);
+            assertEquals("",outputStreamCaptor.toString().trim());
+
+        }
+
+
+    }
+
+
 
 
 

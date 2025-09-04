@@ -1,6 +1,6 @@
 package Lab1;
 
-public class Michael {
+public class Michael implements Homework{
     public static void main(String[] args) {
         if (args.length != 3) {
             return;
