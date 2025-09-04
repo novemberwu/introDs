@@ -1,5 +1,6 @@
 import Lab1.Joey;
 import Lab1.Michael;
+import Lab1.Qingwen;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,8 +24,9 @@ public class Lab1Test {
     @Test
     void testHomework() {
         // Assume 'MyClass' has a method 'printMessage' that prints to System.out
-        //Michael lab = new Michael();
-        Joey lab  = new Joey();
+        Michael lab = new Michael();
+        //Joey lab  = new Joey();
+        //Qingwen lab = new Qingwen();
         String[] args = new String[]{"Rachel", "Joe", "Ross"};
         lab.homework(args);
 
