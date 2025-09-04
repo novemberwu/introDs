@@ -20,10 +20,10 @@ public class Lab1Test {
     public void setUp() {
         System.setOut(new PrintStream(outputStreamCaptor));
 
-        //homeworks.add( new Michael());
+        homeworks.add( new Michael());
         //homeworks.add( new Qingwen());
         //homeworks.add(new Joey());
-        homeworks.add(new Rachel());
+        //homeworks.add(new Rachel());
     }
 
 
@@ -53,10 +53,6 @@ public class Lab1Test {
 
 
     }
-
-
-
-
 
     @AfterEach
     public void tearDown() {
