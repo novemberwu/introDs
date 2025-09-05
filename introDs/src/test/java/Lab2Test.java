@@ -9,6 +9,7 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class Lab2Test {
     private final PrintStream standardOut = System.out;
@@ -71,14 +72,20 @@ public class Lab2Test {
     // Test case for Triangle area
     @Test
     void testTriangleArea(){
-        int a = 3;
-        int b = 4;
-        int c = 5;
+       String[] args = new String[]{"3", "4", "5"};
 
 
         for(Homework homework: this.homeworks){
-            double area = homework.areaTriangle(a, b, c);
+            double area = homework.areaTriangle(args);
             assertEquals(6, area);
+        }
+    }
+
+    @Test
+    void testTriangleAreaInvalidInput(){
+        String[] args = new String[]{"3", "4"};
+        for(Homework homework: this.homeworks){
+            assertThrows(IllegalArgumentException.class, ()-> homework.areaTriangle(args));
         }
     }
 
