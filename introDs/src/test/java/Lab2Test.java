@@ -111,5 +111,6 @@ public class Lab2Test {
     @AfterEach
     public void tearDown() {
         // nothing to restore
+        System.setOut(standardOut);
     }
 }
