@@ -4,7 +4,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 
@@ -13,7 +12,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class Lab2Test {
     private final PrintStream standardOut = System.out;
-    private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
 
     private ArrayList<Homework> homeworks = new ArrayList<>();
 
