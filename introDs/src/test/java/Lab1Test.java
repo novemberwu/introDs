@@ -14,7 +14,7 @@ public class Lab1Test {
     private final PrintStream standardOut = System.out;
     private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
 
-    private ArrayList<Homework> homeworks = new ArrayList<>();
+    private ArrayList<Lab1Homework> homeworks = new ArrayList<>();
 
     @BeforeEach
     public void setUp() {
@@ -30,12 +30,10 @@ public class Lab1Test {
 
         String[] args = new String[]{"Rachel", "Joe", "Ross"};
 
-        for(Homework homework: this.homeworks){
+        for(Lab1Homework homework: this.homeworks){
             homework.homework(args);
             assertEquals("Hi Ross, Joe and Rachel", outputStreamCaptor.toString().trim());
-
         }
-
     }
 
 
@@ -43,13 +41,10 @@ public class Lab1Test {
     void testHomeworkInvalidInput(){
         String[] args = new String[]{"Rachel"};
 
-        for(Homework homework: this.homeworks){
+        for(Lab1Homework homework: this.homeworks){
             homework.homework(args);
             assertEquals("",outputStreamCaptor.toString().trim());
-
         }
-
-
     }
 
     @AfterEach
