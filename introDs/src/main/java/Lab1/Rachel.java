@@ -1,6 +1,6 @@
 package Lab1;
 
-public class Rachel implements Homework {
+public class Rachel implements Lab1Homework{
 
 
     public void homework(String[] args){

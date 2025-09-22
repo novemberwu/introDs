@@ -29,7 +29,7 @@ public class LabSolution implements Homework{
         } catch (FileNotFoundException e) {
             // handle the file not found error
             throw new RuntimeException(e);
-        }catch (NumberFormatException e){
+        }catch (Exception e){
             throw new RuntimeException("The file value does not meet predefined format");
         }
         finally {
