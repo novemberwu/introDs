@@ -2,7 +2,7 @@ package Lab3;
 
 public interface Homework {
 
-    void readFromFile();
+    void readFromFile(String filePath);
     Double getFxRate(String date);
 
 }

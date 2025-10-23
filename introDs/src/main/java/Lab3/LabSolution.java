@@ -12,24 +12,25 @@ public class LabSolution implements Homework{
         Double value = solution.getFxRate("08/02/2025");
         System.out.println(value);
 
-        solution.readFromFile();
+        solution.readFromFile("USD_CNY_FX.csv");
     }
     @Override
-    public void readFromFile() {
+    public void readFromFile(String filePath) {
         Scanner sc = null;
 
         try {
             // initialize scanner to read from a file
-            sc = new Scanner(new File("src/main/java/Lab3/USD_CNY_FX.csv"));
+            File f = new  File(filePath);
+             sc =  new Scanner(f);
             // read from scanner until nothing left
-            while (sc.hasNext()) {
-                String rateStr = sc.next();
-                System.out.println(rateStr);
+            while (sc.hasNextLine()) {
+                String str = sc.nextLine();
+                System.out.println(str);
             }
         } catch (FileNotFoundException e) {
             // handle the file not found error
             throw new RuntimeException(e);
-        }catch (NumberFormatException e){
+        }catch (Exception e){
             throw new RuntimeException("The file value does not meet predefined format");
         }
         finally {
@@ -39,8 +40,9 @@ public class LabSolution implements Homework{
             }
         }
 
-
     }
+
+
 
     @Override
     public Double getFxRate(String date) {

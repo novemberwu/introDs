@@ -7,8 +7,11 @@ public class RachelLab implements  Homework{
       long lb = (long)b;
       long result = (la + lb + Math.abs(la - lb)) / 2;
 
+      int[] array = new int[300];
        System.out.println("Max is "+ result);
        return (int)result;
+
+
     }
 
 
@@ -37,7 +40,6 @@ public class RachelLab implements  Homework{
     public boolean isPalindrome(String str){
         if(str== null || str.length()==0)
             return true;
-
         String lower = str.toLowerCase();
         String normalized = lower.replaceAll("[^a-zA-Z]", "");
         int left = 0;
@@ -51,7 +53,6 @@ public class RachelLab implements  Homework{
             }
         }
         return left > right;
-
     }
 
 
