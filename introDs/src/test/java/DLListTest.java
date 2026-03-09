@@ -1,9 +1,11 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
+
+import LabDLList.Yuyuan.DLList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import LabDLList.DLList;
+
 
 public class DLListTest {
     private DLList<String> deque;
@@ -11,7 +13,7 @@ public class DLListTest {
     @BeforeEach
     public void setUp() {
         // Create a new DLList instance for each test
-        deque = new LabDLList.Cathy.DLList<>();
+        deque = new LabDLList.Yuyuan.DLList<String>();
     }
     /**
      * add tests
